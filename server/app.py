@@ -10,6 +10,8 @@ from resources.books import BookList, BookDetail
 from resources.review import ReviewList, ReviewDetail
 from resources.user import UserList, UserDetail
 from resources.favorites import AddFavorite, RemoveFavorite
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
